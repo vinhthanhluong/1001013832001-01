@@ -19,6 +19,7 @@ $(function () {
             this.anchorLink();
             // this.scrollToMail();
             // this.visual();
+            // this.heightSlider();
             this.menu();
             this.accordion();
         },
@@ -131,6 +132,27 @@ $(function () {
                     fade: false,
                     variableWidth: false,
                 });
+            }
+        },
+        
+        heightSlider: function () {
+            var _w = $(window).width();
+            if (_w < 751) {
+                var item = $('.treat-item .treat-txt');
+
+                function loopH(args) {
+                    var arrayNew = [];
+                    for (let i = 0; i < args.length; i++) {
+                        var element = args[i];
+                        var _mHeight = $(element).innerHeight();
+                        arrayNew.push(_mHeight)
+                    }
+                    return arrayNew;
+                }
+
+                var arrayHeight = loopH(item);
+                var maxHeight = Math.max.apply(Math, arrayHeight)
+                item.css('min-height', maxHeight);
             }
         },
 
