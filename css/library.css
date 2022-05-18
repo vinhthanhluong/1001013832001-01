@@ -263,7 +263,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: wheat;
+  background-color: #8cdcf0;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -274,7 +274,7 @@
   position: absolute;
   left: 0;
   border-radius: 2px;
-  background-color: wheat;
+  background-color: #8cdcf0;
   transition: all 0.3s ease;
 }
 .hamburger-btn .bar::before {
@@ -301,8 +301,8 @@
   right: 30px;
   width: 50px;
   height: 50px;
-  background-color: wheat;
-  border: 1px wheat solid;
+  background-color: #8cdcf0;
+  border: 1px #8cdcf0 solid;
   border-radius: 4px;
   cursor: pointer;
   z-index: 98;
@@ -342,7 +342,7 @@
 }
 .pagination li.active a {
   cursor: default;
-  background-color: wheat;
+  background-color: #8cdcf0;
   color: #fff;
 }
 .pagination li.disabled {
@@ -360,9 +360,9 @@
   justify-content: center;
 }
 .pagination li a:hover {
-  background-color: wheat;
+  background-color: #8cdcf0;
   color: #fff;
-  border: 1px solid wheat;
+  border: 1px solid #8cdcf0;
 }
 
 .search-form {
@@ -380,7 +380,7 @@
   border: 0;
   outline: none;
   font-size: 16px;
-  color: wheat;
+  color: #8cdcf0;
   cursor: pointer;
 }
 
@@ -486,7 +486,7 @@
 }
 .breadcrumb .breadcrumb-menu {
   display: flex;
-  border-bottom: 1px solid wheat;
+  border-bottom: 1px solid #8cdcf0;
   padding: 10px 0;
 }
 .breadcrumb .breadcrumb-menu .breadcrumb-list:not(:first-child) {
@@ -500,7 +500,7 @@
   padding-right: 8px;
 }
 .breadcrumb .breadcrumb-menu .breadcrumb-list.current {
-  color: wheat;
+  color: #8cdcf0;
 }
 .breadcrumb .breadcrumb-menu .breadcrumb-list a {
   font-size: 15px;
@@ -508,22 +508,22 @@
   transition: all 0.3s ease;
 }
 .breadcrumb .breadcrumb-menu .breadcrumb-list a:hover {
-  color: wheat;
+  color: #8cdcf0;
 }
 
-#topic_path {
+#topic-path {
   padding: 15px 0;
   background: #fff;
 }
-#topic_path .topic-ul {
+#topic-path .topic-list {
   display: flex;
   flex-wrap: wrap;
 }
-#topic_path li {
+#topic-path li {
   font-size: 14px;
 }
-#topic_path a:hover {
-  color: wheat;
+#topic-path a:hover {
+  color: #8cdcf0;
 }
 
 .f-control {

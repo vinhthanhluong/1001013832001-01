@@ -5,7 +5,7 @@
 @import url(../css/library.css);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 .main-cl {
-  color: wheat;
+  color: #8cdcf0;
 }
 
 /*=============================G L O B A L=============================*/
@@ -61,6 +61,12 @@
 .image-r {
   float: right;
   margin: 0 0 20px 60px;
+}
+
+.image-c {
+  text-align: center;
+  margin: 0 auto 33px;
+  line-height: 0;
 }
 
 .clear {
