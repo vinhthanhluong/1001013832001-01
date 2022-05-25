@@ -29,9 +29,6 @@
     visibility: visible;
     z-index: 1;
   }
-  .dropdown:hover a:hover i {
-    transform: rotate(-90deg);
-  }
 
   .sub-menu {
     transition: all 0.3s ease;
@@ -48,28 +45,6 @@
 /* end screen-min:751px */
 /* end screen-min:751px && screen-max:1500px */
 @media screen and (max-width: 750px) {
-  h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-input,
-button,
-textarea,
-select,
-p,
-blockquote,
-th,
-td,
-pre,
-address,
-li,
-dt,
-dd {
-    font-size: 140%;
-  }
-
   #wrapper {
     min-width: unset !important;
   }
@@ -84,11 +59,7 @@ dd {
   }
 
   .open-nav .header-menu {
-    right: 0;
-  }
-  .open-nav .overplay {
-    opacity: 1;
-    visibility: visible;
+    top: 169px;
   }
 
   .hamburger-btn {
@@ -99,46 +70,18 @@ dd {
     display: none;
   }
 
-  .search-mobile {
-    display: flex;
-  }
-  .search-mobile .search-form {
-    width: 90%;
-  }
-  .search-mobile .f-control {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  .search-mobile .f-submit {
-    font-size: 12px;
-  }
-
   .header-menu {
     position: fixed;
-    top: 0;
-    left: unset;
-    right: 100vw;
+    top: 100%;
+    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     text-align: left;
     transition: all 0.4s ease;
     z-index: 98;
-  }
-  .header-menu .menu-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 260px;
-    height: 100%;
-    background-color: #fff;
-    padding: 20px 0 40px;
-    display: flex;
-    flex-direction: column;
-    z-index: 99;
-  }
-  .header-menu .logo-mobile {
-    display: block;
+    background-color: rgba(30, 44, 99, 0.7);
+    background-color: #8cdcf0;
   }
 
   .menu-list {
@@ -216,29 +159,6 @@ dd {
 /* end screen-max:560px */
 /* end screen-max:520px */
 /* end screen-max:475px */
-@media screen and (max-width: 425px) {
-  h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-input,
-button,
-textarea,
-select,
-p,
-blockquote,
-th,
-td,
-pre,
-address,
-li,
-dt,
-dd {
-    font-size: 140%;
-  }
-}
 /* end screen-max:425px */
 /* end screen-max:375px */
 /* end screen-max:320px */

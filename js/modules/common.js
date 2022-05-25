@@ -24,8 +24,8 @@ $(function () {
 
     var obj = {
         init: function () {
-            this.tab();
-            this.aos();
+            // this.tab();
+            // this.aos();
             this.toTop();
             this.anchorLink();
             // this.scrollToMail();
@@ -172,7 +172,7 @@ $(function () {
         menu: function () {
             $('.hamburger-btn').click(function () {
                 $(this).toggleClass('--active');
-                $('body').toggleClass('open-nav');
+                $('body').toggleClass('open-nav no-scroll');
             });
 
             $('.overplay').click(function () {

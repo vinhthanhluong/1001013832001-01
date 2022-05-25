@@ -277,7 +277,6 @@ address {
 }
 
 html {
-  overflow-x: hidden;
   font-size: 10px;
 }
 
@@ -296,19 +295,6 @@ html {
   line-height: 1.4;
   color: #000;
   background: #fff;
-}
-body::-webkit-scrollbar,
-html::-webkit-scrollbar {
-  width: 0px;
-}
-body::-webkit-scrollbar-thumb,
-html::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 990px;
-}
-body::-webkit-scrollbar-track,
-html::-webkit-scrollbar-track {
-  background: transparent;
 }
 
 a {

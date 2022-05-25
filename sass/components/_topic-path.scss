@@ -1,0 +1,20 @@
+#topic-path {
+    padding: 15px 0;
+    // background: #fff;
+
+    .topic-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    li {
+        font-size: 14px;
+    }
+
+    a { 
+        &:hover{
+            color: $main-cl;
+        }
+    }
+}

@@ -231,7 +231,7 @@ address {
 // }
 
 html {
-    overflow-x: hidden;
+    // overflow-x: hidden;
     font-size: $fz-base;
     // scroll-behavior: smooth;
 }
@@ -253,11 +253,10 @@ html {
     min-height: 100%;
     margin: auto;
     font-family: $font-body;
-
     line-height: $lh-body;
     color: $fz-cl;
     background: $w-cl;
-    @include custom-scrollbar(0px , transparent);
+    // @include custom-scrollbar(0px , transparent);
 }
 
 a {
