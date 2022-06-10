@@ -1,9 +1,4 @@
-.tabs{
-    .tab-content{
-        font-size: 40px;
-        text-align: center
-    }
-}
+
 
 .text-aos{
     margin-top: 1000px;
@@ -38,5 +33,12 @@
 
     &3{
         margin-top: 1000px;
+    }
+}
+
+#header{
+    h1{
+        font-size: 16px;
+        padding-bottom: 0;
     }
 }

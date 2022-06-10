@@ -12,7 +12,7 @@
 }
 
 //scroll-base
-@mixin custom-scrollbar ($width: $w-scroll,
+@mixin custom-vertical-scrollbar($width: 0px,
     $thumb: $main-cl,
     $track: transparent) {
     &::-webkit-scrollbar {
@@ -29,26 +29,9 @@
     }
 }
 
-@mixin custom-vertical-scrollbar($width: $w-scroll,
+@mixin custom-horizontal-scrollbar($height: 0px,
     $thumb: $main-cl,
-    $track: $w-cl) {
-    &::-webkit-scrollbar {
-        width: $width;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: $thumb;
-        border-radius: 990px;
-    }
-
-    &::-webkit-scrollbar-track {
-        background: $track;
-    }
-}
-
-@mixin custom-horizontal-scrollbar($height: $h-scroll,
-    $thumb: $main-cl,
-    $track: $w-cl) {
+    $track: transparent) {
     &::-webkit-scrollbar {
         height: $height;
     }

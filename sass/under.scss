@@ -4,7 +4,7 @@
 @import "./core/animation";
 
 /*============================= G L O B A L =============================*/
-.main-under {
+.under {
     section,
     .section {
         margin-bottom: 80px;
@@ -31,7 +31,7 @@
 }
 
 // ======================== mainvisual ========================
-.main-under {
+.under {
     #mainvisual {
         position: relative;
         display: flex;
@@ -59,7 +59,7 @@
 }
 
 // ======================== heading ========================
-.main-under {
+.under {
     .h3,
     .h4,
     .h5,

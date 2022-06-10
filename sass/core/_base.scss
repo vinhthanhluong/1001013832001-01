@@ -26,7 +26,7 @@ html {
     line-height: $lh-body;
     color: $fz-cl;
     background: $w-cl;
-    @include custom-scrollbar(0px , transparent);
+    @include custom-vertical-scrollbar();
 }
 
 a {
@@ -111,6 +111,10 @@ p:last-child {
 
 .lk-full{
     @include pos-full;
+}
+
+.ovh{
+    overflow: hidden;
 }
 
 .clear {

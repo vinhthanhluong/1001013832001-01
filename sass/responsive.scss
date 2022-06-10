@@ -16,22 +16,10 @@
     .menu-list {
         //level 1
         > li {
-            > a {
-                &::before {
-                    content: "";
-                    position: absolute;
-                    bottom: 0;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 0;
-                    height: 1.5px;
-                    background-color: #1a2542;
-                    transition: all 0.3s ease;
-                }
-                &:hover {
-                    &::before {
-                        width: 100%;
-                    }
+            &:hover {
+                > a,
+                > span {
+                    color: red;
                 }
             }
         }
@@ -54,7 +42,7 @@
         pointer-events: none;
         @include hidden;
 
-        a {
+        a , span {
             &:hover {
                 color: #fff;
                 background-color: #1a2542;
@@ -112,7 +100,7 @@
 
     .open-nav {
         .header-menu {
-            top: 169px;
+            top: 100px;
         }
     }
 
@@ -131,52 +119,48 @@
         width: 100%;
         height: 100%;
         text-align: left;
-        transition: all 0.4s ease;
-        z-index: 98;
-        background-color: rgba($color: #1e2c63, $alpha: .7);
-        background-color: #8cdcf0;
+        transition: all 0.3s ease;
+        z-index: 99;
+        background-color: rgba($color: #1e2c63, $alpha: 0.7);
+        background-color: #fff;
     }
 
     .menu-list {
         display: block;
         overflow-x: hidden;
         overflow-y: auto;
-        height: 400px;
-        @include custom-scrollbar(3px, #1a2542);
+        height: calc(100vh - 100px);
+        // @include custom-vertical-scrollbar(3px, #1a2542);
 
         // style chung
-        a {
-            padding: 10px 20px;
-            border-bottom: 1px solid rgba($color: black, $alpha: 0.16);
-            transition: all 0.3s ease;
-        }
+        // a {
+        //     padding: 10px 20px;
+        // }
 
         // level 1
         > li {
-            > a {
-                &:focus {
-                    color: #1a2542;
-                }
+            > a,
+            > span {
+                border-bottom: 1px solid #ebebeb;
+                font-size: 16px;
+                font-weight: bold;
+                color: #004680;
+                padding: 10px 20px;
+                width: 100%;
+                display: block;
+                position: relative;
             }
         }
     }
 
     .dropdown {
-        position: relative;
-
-        &:hover {
-            > a {
-                color: #1a2542;
-            }
-        }
-
         .open {
             &::before {
                 transform: scale(-1);
             }
         }
 
-        > a {
+        span {
             &::before {
                 content: "";
                 border-top: solid 8px #1e2c63;
@@ -185,45 +169,9 @@
                 position: absolute;
                 right: 15px;
                 top: calc(50% - 4px);
-                transition: all 0.2s;
+                transition: all 0.3s;
             }
         }
-
-        .dropdown {
-            &:hover {
-                > a {
-                    &::before {
-                        border-top: solid 8px red;
-                    }
-                }
-            }
-        }
-
-        // .fa.fa-angle-down {
-        //     width: 20px;
-        //     height: 100%;
-        //     font-weight: bold;
-        //     transition: transform 0.3s;
-        //     text-align: center;
-
-        //     // mobile
-        //     @include max-media($bk-d-768) {
-        //         position: absolute;
-        //         top: 0;
-        //         right: 0;
-        //         width: 40px;
-
-        //         &:before {
-        //             @include pos-mid;
-        //         }
-
-        //         transform: rotate(-90deg);
-
-        //         &.--show {
-        //             transform: rotate(0deg);
-        //         }
-        //     }
-        // }
     }
 
     .sub-menu {
@@ -232,22 +180,29 @@
         left: 0 !important;
         width: 100%;
         display: none;
+        padding: 10px 20px;
 
-        a {
-            padding-left: 30px;
-            border-bottom: 1px solid white;
-            &:hover {
-                color: white;
-                background-color: #1a2542;
+        a , span{
+            padding: 6px 16px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 16px;
+                left: 0;
+                width: 10px;
+                height: 1px;
+                background-color: #004680;
             }
         }
 
         .sub-menu a {
-            padding-left: 45px;
+            padding-left: 30px;
         }
 
         .sub-menu .sub-menu a {
-            padding-left: 60px;
+            padding-left: 40px;
         }
     }
     //  ========================== END - Header ==========================

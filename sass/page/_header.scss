@@ -1,6 +1,7 @@
 #header {
     background: #fff;
-    padding: 25px 0;
+    padding: 20px 0;
+    height: 100px;
     border-bottom: 1px solid black;
     width: 100%;
     transition: all .3s ease;
@@ -33,13 +34,10 @@
     // style chung
     a {
         position: relative;
-        padding: 0 0 6px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         transition: all .3s ease;
-        color: #1a2542;
-        // font-size: 14px;
     }
 
     // active level 1
@@ -78,15 +76,16 @@
     min-width: 200px;
     // font-size: 12px;
     background-color: white;
-    box-shadow: 10px 10px 30px rgba($color: black, $alpha: 0.16);
+    // box-shadow: 10px 10px 30px rgba($color: black, $alpha: 0.16);
 
     .sub-menu {
         top: 0;
         left: 100%;
     }
 
-    a {
+    a , span {
         padding: 15px;
+        display: block;
     }
 }
 

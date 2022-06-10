@@ -68,28 +68,28 @@
   }
 }
 /*============================= G L O B A L =============================*/
-.main-under section,
-.main-under .section {
+.under section,
+.under .section {
   margin-bottom: 80px;
 }
-.main-under section:last-child,
-.main-under .section:last-child {
+.under section:last-child,
+.under .section:last-child {
   margin-bottom: 0;
 }
-.main-under #content {
+.under #content {
   padding: 0 0 100px;
   margin: 0 auto;
   width: 1080px;
 }
-.main-under #content p:last-child,
-.main-under #content table:last-child {
+.under #content p:last-child,
+.under #content table:last-child {
   margin-bottom: 0;
 }
-.main-under #content p {
+.under #content p {
   margin-bottom: 15px;
 }
 
-.main-under #mainvisual {
+.under #mainvisual {
   position: relative;
   display: flex;
   align-items: center;
@@ -100,7 +100,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.main-under #mainvisual h2 {
+.under #mainvisual h2 {
   position: relative;
   text-align: center;
   letter-spacing: -1.5px;
@@ -112,16 +112,16 @@
   text-shadow: 0 0 8px #5e5e5e;
 }
 
-.main-under .h3,
-.main-under .h4,
-.main-under .h5,
-.main-under .h6 {
+.under .h3,
+.under .h4,
+.under .h5,
+.under .h6 {
   position: relative;
   line-height: 1.4;
   letter-spacing: 2px;
   font-weight: 500;
 }
-.main-under .h3 {
+.under .h3 {
   font-size: 42px;
   margin-bottom: 32px;
   text-align: center;
@@ -129,19 +129,19 @@
   line-height: 1.6;
   font-weight: bold;
 }
-.main-under .h4 {
+.under .h4 {
   font-size: 32px;
   letter-spacing: 5.5px;
   line-height: 1.2;
   margin-bottom: 20px;
 }
-.main-under .h5 {
+.under .h5 {
   font-size: 28px;
   letter-spacing: 5px;
   line-height: 1.2;
   margin-bottom: 20px;
 }
-.main-under .h6 {
+.under .h6 {
   font-size: 24px;
   letter-spacing: 5px;
   line-height: 1.2;

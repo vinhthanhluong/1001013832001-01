@@ -1,14 +1,6 @@
 @media screen and (min-width: 751px) {
-  #topic_path ul li a:hover {
+  #topic_path li a:hover {
     text-decoration: none;
-  }
-
-  .pagination li:not([class]) a:hover {
-    opacity: 0.8;
-  }
-
-  .wp-pagenavi a:hover {
-    opacity: 0.8;
   }
 }
 /* end screen-min:751px */
@@ -31,7 +23,10 @@
   .tbl-block {
     display: block;
   }
-  .tbl-block thead, .tbl-block tr, .tbl-block td, .tbl-block th {
+  .tbl-block thead,
+.tbl-block tr,
+.tbl-block td,
+.tbl-block th {
     display: block;
     width: 100%;
   }

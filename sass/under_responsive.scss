@@ -3,22 +3,19 @@
 @import "./core/mixins";
 
 @include min-media(751px) {
-    #topic_path ul li a:hover {
-        text-decoration: none;
-    }
-
-    .pagination li:not([class]) a:hover {
-        opacity: 0.8;
-    }
-
-    .wp-pagenavi a:hover {
-        opacity: 0.8;
+    #topic_path {
+        li {
+            a:hover {
+                text-decoration: none;
+            }
+        }
     }
 }
 
 /* end screen-min:751px */
 
 @media screen and (min-width: 751px) and (max-width: 1500px) {
+    
 }
 
 /* end screen-min:751px && screen-max:1500px */
@@ -31,21 +28,23 @@
         margin: 0 0 20px;
     }
 
-    .under-tbl{
-        tr{
-            th + td{
+    .under-tbl {
+        tr {
+            th + td {
                 border-top: none;
             }
             &:not(:first-child) th {
                 border-top: none;
             }
-
         }
     }
 
-    .tbl-block{
+    .tbl-block {
         display: block;
-        thead , tr , td, th{
+        thead,
+        tr,
+        td,
+        th {
             display: block;
             width: 100%;
         }
@@ -92,7 +91,6 @@
 /* end screen-max:475px */
 
 @include max-media(425px) {
-    
 }
 
 /* end screen-max:425px */
@@ -124,6 +122,5 @@
 /* Safari 10.1+ (which is the latest version of Safari at this time) */
 @media not all and (min-resolution: 0.001dpcm) {
     @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-		
-	}
+    }
 }
