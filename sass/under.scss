@@ -1,67 +1,10 @@
 // Core
 @import "./core/variable";
 @import "./core/mixins";
+@import "./core/animation";
 
 /*============================= G L O B A L =============================*/
-.wp-pagenavi {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 43px;
-}
-
-.wp-pagenavi span,
-.wp-pagenavi a {
-    display: inline-flex;
-    min-width: 40px;
-    height: 40px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0;
-    font-size: 16px;
-    color: #fff;
-    line-height: 1em;
-    padding: 3px 5px 5px;
-    background: #b5b5b5;
-    text-decoration: none;
-    margin: 5px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-    border: none;
-}
-
-.wp-pagenavi span.current {
-    background: #544638;
-}
-
-.wp-pagenavi a.previouspostslink,
-.wp-pagenavi a.nextpostslink {
-    font-size: 26px;
-    color: #56493b;
-    padding-bottom: 10px;
-}
-
-.wp-pagenavi a.nextpostslink {
-    padding-right: 4px;
-}
-
-.w {
-    &30 {
-        width: 30%;
-    }
-    &33 {
-        width: calc(100% / 3);
-    }
-    &50 {
-        width: 50%;
-    }
-    &100 {
-        width: 100%;
-    }
-}
-
-.under {
+.main-under {
     section,
     .section {
         margin-bottom: 80px;
@@ -88,7 +31,7 @@
 }
 
 // ======================== mainvisual ========================
-.under {
+.main-under {
     #mainvisual {
         position: relative;
         display: flex;
@@ -116,7 +59,7 @@
 }
 
 // ======================== heading ========================
-.under {
+.main-under {
     .h3,
     .h4,
     .h5,
@@ -496,32 +439,26 @@
 }
 
 // ======================== content ========================
-.under {
+.main-under {
+    p,
+    li,
+    a,
+    th,
+    td,
+    dt,
+    dd,
+    dl {
+        font-size: 18px;
+        // letter-spacing: -0.6px;
+        // line-height: 2;
+        // font-weight: 500;
+    }
+
     a {
         color: #000;
         &:hover {
             color: #4ec0dd;
         }
-    }
-
-    #main {
-        p,
-        li,
-        a,
-        th,
-        td,
-        dt,
-        dd,
-        dl {
-            font-size: 18px;
-            // letter-spacing: -0.6px;
-            // line-height: 2;
-            // font-weight: 500;
-        }
-    }
-
-    .sec-90 {
-        margin-bottom: 90px;
     }
 
     .sec-wrapper {
@@ -585,8 +522,8 @@
     }
 }
 
-/*============================= PAGE UNDER =============================*/
-// @import './page/about';
+/*============================= Overnote =============================*/
+@import "./page/ovn";
 
 /*============================= HACK CSS =============================*/
 

@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    text-rendering: optimizespeed;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: $fz-base;
+    // scroll-behavior: smooth;
+}
+
+body {
+    font-size: $fz-body;
+    min-height: 100vh;
+    transform-origin: all .3s;
+    min-width: 320px;
+}
+
+body,
+html {
+    min-height: 100%;
+    margin: auto;
+    font-family: $font-body;
+    line-height: $lh-body;
+    color: $fz-cl;
+    background: $w-cl;
+    @include custom-scrollbar(0px , transparent);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all .3s ease;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+/*=============================G L O B A L=============================*/
+#wrapper {
+    min-width: 1280px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container-full {
+    max-width: $max-width;
+    width: $container-full-width;
+    margin: 0 auto;
+    padding: 0 $padding;
+}
+
+.container {
+    width: $container-width;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.cols {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: (-$padding);
+}
+
+.col {
+    padding: $padding;
+}
+
+.img-w-100 {
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.img-h-100 {
+    img {
+        width: auto;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.img-l {
+    float: left;
+    margin: 0 60px 20px 0;
+    line-height: 0;
+}
+
+.img-r {
+    float: right;
+    margin: 0 0 20px 60px;
+    line-height: 0;
+}
+
+.img-c {
+    text-align: center;
+    margin: 0 auto 33px;
+    line-height: 0;
+}
+
+.lk-full{
+    @include pos-full;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.no-scroll {
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+    -webkit-overflow-scrolling: auto;
+}

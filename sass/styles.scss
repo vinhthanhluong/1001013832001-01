@@ -8,104 +8,26 @@
 // Core
 @import "./core/variable";
 @import "./core/mixins";
-@import url(../css/base.css);
-// @import url(../sass/core/base.css);
+@import "./core/rest";
+@import "./core/base";
+@import "./core/animation";
 
 // Components
-@import url(../css/library.css);
-// @import url(../sass/components/library.css);
+@import './components/title';
+@import './components/spacing';
+@import './components/button';
+@import './components/pagination';
+@import './components/slick';
+@import './components/topic-path';
 
 //Font
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 
-/*=============================G L O B A L=============================*/
-#wrapper {
-    min-width: 1230px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.container-full {
-    max-width: $max-width;
-    width: $container-full-width;
-    margin: 0 auto;
-    padding: 0 $padding;
-}
-
-.container {
-    width: $container-width;
-    max-width: 100%;
-    margin: 0 auto;
-}
-
-.cols {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    margin: (-$padding);
-}
-
-.col {
-    padding: $padding;
-}
-
-.img-w-100 {
-    img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-}
-
-.img-h-100 {
-    img {
-        width: auto;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-.image-l {
-    float: left;
-    margin: 0 60px 20px 0;
-}
-
-.image-r {
-    float: right;
-    margin: 0 0 20px 60px;
-}
-
-.image-c {
-    text-align: center;
-    margin: 0 auto 33px;
-    line-height: 0;
-}
-
-.clear {
-    clear: both;
-}
-
-.clearfix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-}
-
-.no-scroll {
-    overflow: hidden;
-    -ms-touch-action: none;
-    touch-action: none;
-    -webkit-overflow-scrolling: auto;
-}
-
 @import "./core/code";
 /*============================= H_E_A_D_E_R =============================*/
-@import "./components/header";
+@import "./page/header";
 /*============================= F_O_O_T_E_R =============================*/
-@import "./components/footer";
+@import "./page/footer";
 /*============================= C_O_N_T_E_N_T =============================*/
 @import "./page/home";
 /*============================= HACK CSS =============================*/

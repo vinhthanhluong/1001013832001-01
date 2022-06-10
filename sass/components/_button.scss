@@ -1,36 +1,36 @@
-.btn {
-    display: inline-block;
-    vertical-align: middle;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-    border: none;
-    //height: 40px;
-    width: 100%;
-    line-height: 20px;
-    background-color: transparent;
-    transition: all 0.3s ease;
-    padding: 10px 0px;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: bold;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-    outline: 0px;
+// .btn {
+//     display: inline-block;
+//     vertical-align: middle;
+//     appearance: none;
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     -ms-appearance: none;
+//     -o-appearance: none;
+//     border: none;
+//     //height: 40px;
+//     width: 100%;
+//     line-height: 20px;
+//     background-color: transparent;
+//     transition: all 0.3s ease;
+//     padding: 10px 0px;
+//     text-align: center;
+//     text-transform: uppercase;
+//     font-weight: bold;
+//     position: relative;
+//     overflow: hidden;
+//     z-index: 0;
+//     outline: 0px;
 
-    &:disabled,
-    &:disabled:hover {
-        cursor: not-allowed;
-        color: initial;
-    }
+//     &:disabled,
+//     &:disabled:hover {
+//         cursor: not-allowed;
+//         color: initial;
+//     }
 
-    &:hover {
-        box-shadow: 10px 10px 20px rgba($color: $b-cl, $alpha: 0.16);
-    }
-}
+//     &:hover {
+//         box-shadow: 10px 10px 20px rgba($color: $b-cl, $alpha: 0.16);
+//     }
+// }
 
 .hamburger-btn {
     width: 40px;
@@ -108,9 +108,18 @@
         @include visible();
     }
 
-    img {
-        @include pos-mid;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url('../images/ic-scrolltop.png') center no-repeat;
+        width: 30px;
+        height: 30px;
         filter: brightness(0) invert(1);
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease;
     }
 
     &:hover {

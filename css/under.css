@@ -1,82 +1,95 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fixedMenu {
+  0% {
+    opacity: 0.7;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes showTab {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes jelly {
+  0%, 100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+@keyframes infin-box {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+    background-color: red;
+  }
+  29% {
+    opacity: 1;
+    background-color: red;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /*============================= G L O B A L =============================*/
-.wp-pagenavi {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 43px;
-}
-
-.wp-pagenavi span,
-.wp-pagenavi a {
-  display: inline-flex;
-  min-width: 40px;
-  height: 40px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0;
-  font-size: 16px;
-  color: #fff;
-  line-height: 1em;
-  padding: 3px 5px 5px;
-  background: #b5b5b5;
-  text-decoration: none;
-  margin: 5px;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  border: none;
-}
-
-.wp-pagenavi span.current {
-  background: #544638;
-}
-
-.wp-pagenavi a.previouspostslink,
-.wp-pagenavi a.nextpostslink {
-  font-size: 26px;
-  color: #56493b;
-  padding-bottom: 10px;
-}
-
-.wp-pagenavi a.nextpostslink {
-  padding-right: 4px;
-}
-
-.w30 {
-  width: 30%;
-}
-.w33 {
-  width: 33.3333333333%;
-}
-.w50 {
-  width: 50%;
-}
-.w100 {
-  width: 100%;
-}
-
-.under section,
-.under .section {
+.main-under section,
+.main-under .section {
   margin-bottom: 80px;
 }
-.under section:last-child,
-.under .section:last-child {
+.main-under section:last-child,
+.main-under .section:last-child {
   margin-bottom: 0;
 }
-.under #content {
+.main-under #content {
   padding: 0 0 100px;
   margin: 0 auto;
   width: 1080px;
 }
-.under #content p:last-child,
-.under #content table:last-child {
+.main-under #content p:last-child,
+.main-under #content table:last-child {
   margin-bottom: 0;
 }
-.under #content p {
+.main-under #content p {
   margin-bottom: 15px;
 }
 
-.under #mainvisual {
+.main-under #mainvisual {
   position: relative;
   display: flex;
   align-items: center;
@@ -87,7 +100,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.under #mainvisual h2 {
+.main-under #mainvisual h2 {
   position: relative;
   text-align: center;
   letter-spacing: -1.5px;
@@ -99,16 +112,16 @@
   text-shadow: 0 0 8px #5e5e5e;
 }
 
-.under .h3,
-.under .h4,
-.under .h5,
-.under .h6 {
+.main-under .h3,
+.main-under .h4,
+.main-under .h5,
+.main-under .h6 {
   position: relative;
   line-height: 1.4;
   letter-spacing: 2px;
   font-weight: 500;
 }
-.under .h3 {
+.main-under .h3 {
   font-size: 42px;
   margin-bottom: 32px;
   text-align: center;
@@ -116,19 +129,19 @@
   line-height: 1.6;
   font-weight: bold;
 }
-.under .h4 {
+.main-under .h4 {
   font-size: 32px;
   letter-spacing: 5.5px;
   line-height: 1.2;
   margin-bottom: 20px;
 }
-.under .h5 {
+.main-under .h5 {
   font-size: 28px;
   letter-spacing: 5px;
   line-height: 1.2;
   margin-bottom: 20px;
 }
-.under .h6 {
+.main-under .h6 {
   font-size: 24px;
   letter-spacing: 5px;
   line-height: 1.2;
@@ -423,30 +436,27 @@
   border-color: transparent transparent #ffe61e transparent;
 }
 
-.under a {
-  color: #000;
-}
-.under a:hover {
-  color: #4ec0dd;
-}
-.under #main p,
-.under #main li,
-.under #main a,
-.under #main th,
-.under #main td,
-.under #main dt,
-.under #main dd,
-.under #main dl {
+.main-under p,
+.main-under li,
+.main-under a,
+.main-under th,
+.main-under td,
+.main-under dt,
+.main-under dd,
+.main-under dl {
   font-size: 18px;
 }
-.under .sec-90 {
-  margin-bottom: 90px;
+.main-under a {
+  color: #000;
 }
-.under .sec-wrapper {
+.main-under a:hover {
+  color: #4ec0dd;
+}
+.main-under .sec-wrapper {
   max-width: 1080px;
   margin: 0 auto;
 }
-.under .sech3 {
+.main-under .sech3 {
   background-color: #fffce8;
   padding: 31px 0 92px;
   margin-bottom: 120px;
@@ -456,40 +466,40 @@
   transform: translateX(-50%);
   min-width: 1400px;
 }
-.under .sech3 p {
+.main-under .sech3 p {
   font-size: 20px;
   padding: 0 50px 0 58px;
   letter-spacing: -0.5px;
   line-height: 2;
 }
-.under .sech4 h4 {
+.main-under .sech4 h4 {
   width: 50%;
   display: inline-block;
 }
-.under .sech4 .image-r {
+.main-under .sech4 .image-r {
   margin: 0 0 0 120px;
   line-height: 0;
 }
-.under .sech4 .image-r img {
+.main-under .sech4 .image-r img {
   width: 100%;
   max-width: 100%;
   object-fit: cover;
 }
-.under .sech5 h5 {
+.main-under .sech5 h5 {
   width: 59%;
   display: inline-block;
 }
-.under .sech5 .image-r {
+.main-under .sech5 .image-r {
   margin: 10px 0 0 85px;
   line-height: 0;
 }
-.under .sech5 .image-r img {
+.main-under .sech5 .image-r img {
   width: 100%;
   max-width: 100%;
   object-fit: cover;
 }
 
-/*============================= PAGE UNDER =============================*/
+/*============================= Overnote =============================*/
 /*============================= HACK CSS =============================*/
 /* IE */
 /* EGDE */

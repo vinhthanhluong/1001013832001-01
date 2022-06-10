@@ -11,28 +11,16 @@ $(function () {
             $('html,body').animate({ scrollTop: p.top - offsetSP }, 400);
         }
     }
-
-    function loopH(args) {
-        var arrayNew = [];
-        for (let i = 0; i < args.length; i++) {
-            var element = args[i];
-            var _mHeight = $(element).innerHeight();
-            arrayNew.push(_mHeight)
-        }
-        return arrayNew;
-    }
-
     var obj = {
         init: function () {
             // this.tab();
-            // this.aos();
             this.toTop();
             this.anchorLink();
             // this.scrollToMail();
             // this.visual();
             this.matchHeight();
             this.menu();
-            this.accordion();
+            // this.accordion();
         },
 
         //Change tab
@@ -45,22 +33,6 @@ $(function () {
 
                 $('[data-tab-content][data-tab-group="' + _group + '"]').removeClass('active');
                 $('[data-tab-content="' + _index + '"][data-tab-group="' + _group + '"]').addClass('active');
-            });
-        },
-
-        //aos
-        aos: function () {
-            AOS.init({
-                startEvent: 'DOMContentLoaded',
-                offset: 0,
-                duration: 800,
-                delay: '200',
-                easing: 'ease-in-sine',
-                once: true,
-                mirror: true,
-                disable: function () {
-                    return $(window).width() <= 768;
-                },
             });
         },
 
@@ -80,21 +52,6 @@ $(function () {
                     $('.scroll-top').removeClass('--active');
                 }
             });
-
-            // let lastScrollTop = 0;
-            // $(window).scroll(function () {
-            //     var st = $('html,body').scrollTop();
-            //     if (st < 10) {
-            //         $('.scroll-top').removeClass('--active');
-            //         return;
-            //     }
-            //     if (st > lastScrollTop) {
-            //         $('.scroll-top').removeClass('--active');
-            //     } else {
-            //         $('.scroll-top').addClass('--active');
-            //     }
-            //     lastScrollTop = st <= 0 ? 0 : st;
-            // });
         },
 
         //Anchor Link
@@ -158,14 +115,6 @@ $(function () {
         },
 
         matchHeight: function () {
-            function mHeight(arg) {
-                var item = arg;
-                var arrayHeight = loopH(item);
-                var maxHeight = Math.max.apply(Math, arrayHeight)
-                item.css('height', maxHeight);
-                return item;
-            }
-            // var mh = mHeight( $('.asddd'));
             // $('.asddd').matchHeight();
         },
 
@@ -178,14 +127,6 @@ $(function () {
             $('.overplay').click(function () {
                 $('.hamburger-btn').trigger('click');
             });
-
-            // $(document).on('mousedown touchstart', function (e) {
-            //     if ($(e.target).closest(".header-menu, .hamburger-btn").length === 0) {
-            //         if ($('body').hasClass('open-nav')) {
-            //             $('.hamburger-btn').trigger('click');
-            //         }
-            //     }
-            // });
 
             if ($('.header-menu').length) {
                 const _w = $(window).width();

@@ -14,8 +14,8 @@
 /* end screen-min:751px */
 /* end screen-min:751px && screen-max:1500px */
 @media screen and (max-width: 750px) {
-  .image-r,
-.image-l {
+  .img-r,
+.img-l {
     float: none;
     text-align: center;
     margin: 0 0 20px;
