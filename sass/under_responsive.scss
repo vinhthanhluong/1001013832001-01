@@ -15,7 +15,6 @@
 /* end screen-min:751px */
 
 @media screen and (min-width: 751px) and (max-width: 1500px) {
-    
 }
 
 /* end screen-min:751px && screen-max:1500px */
@@ -28,6 +27,7 @@
         margin: 0 0 20px;
     }
 
+    // ======================== table ========================
     .under-tbl {
         tr {
             th + td {
@@ -63,8 +63,28 @@
         min-width: 640px;
     }
 
-    #content {
-        padding: 30px 0 50px;
+    // ======================== under style ========================
+
+
+
+    // ======================== content ========================
+    .under{
+        #content {
+            padding: 30px 0 50px;
+        }
+    }
+
+    .main-under {
+        p,
+        li,
+        a,
+        th,
+        td,
+        dt,
+        dd,
+        dl {
+            font-size: 14px;
+        }
     }
 }
 

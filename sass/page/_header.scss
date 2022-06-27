@@ -39,49 +39,15 @@
         justify-content: space-between;
         transition: all .3s ease;
     }
-
-    // active level 1
-    .--active {
-        a {
-            color: #1a2542;
-        }
-
-        // active level 2
-        .--active {
-            >a {
-                background-color: #1a2542;
-                color: white;
-            }
-        }
-    }
 }
 
 .dropdown {
     position: relative;
-    .dropdown {
-        &:hover {
-            >a {
-                background-color: #1a2542;
-                color: white;
-            }
-        }
-    }
 }
 
 .sub-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
     width: 100%;
-    min-width: 200px;
-    // font-size: 12px;
     background-color: white;
-    // box-shadow: 10px 10px 30px rgba($color: black, $alpha: 0.16);
-
-    .sub-menu {
-        top: 0;
-        left: 100%;
-    }
 
     a , span {
         padding: 15px;

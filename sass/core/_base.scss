@@ -45,11 +45,13 @@ p:last-child {
 
 /*=============================G L O B A L=============================*/
 #wrapper {
+    max-width: 1920px;
     min-width: 1280px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0 auto;
 }
 
 .container-full {
