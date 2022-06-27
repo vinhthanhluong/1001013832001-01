@@ -3,7 +3,7 @@
 @import "./core/mixins";
 
 /*============================= G L O B A L =============================*/
-.under {
+.main-under {
     section,
     .section {
         margin-bottom: 80px;
@@ -56,7 +56,7 @@
 }
 
 // ======================== heading ========================
-.under {
+.main-under {
     .h3,
     .h4,
     .h5,
@@ -373,7 +373,6 @@
 
 .under-anc {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
 
@@ -389,13 +388,13 @@
         justify-content: center;
         position: relative;
         width: 365px;
-        height: 70px;
+        height: 100%;
         text-decoration: none;
         font-size: 20px;
         letter-spacing: -0.5px;
         z-index: 1;
         transition: all 0.3s ease;
-        padding: 10px;
+        padding: 20px 10px;
         line-height: 1.2;
         text-align: center;
 

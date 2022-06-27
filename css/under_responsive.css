@@ -3,22 +3,19 @@
     text-decoration: none;
   }
 }
-
 /* end screen-min:751px */
 /* end screen-min:751px && screen-max:1500px */
 @media screen and (max-width: 750px) {
-
   .img-r,
-  .img-l {
+.img-l {
     float: none;
     text-align: center;
     margin: 0 0 20px;
   }
 
-  .under-tbl tr th+td {
+  .under-tbl tr th + td {
     border-top: none;
   }
-
   .under-tbl tr:not(:first-child) th {
     border-top: none;
   }
@@ -26,11 +23,10 @@
   .tbl-block {
     display: block;
   }
-
   .tbl-block thead,
-  .tbl-block tr,
-  .tbl-block td,
-  .tbl-block th {
+.tbl-block tr,
+.tbl-block td,
+.tbl-block th {
     display: block;
     width: 100%;
   }
@@ -48,22 +44,21 @@
     min-width: 640px;
   }
 
-  .under #content {
+  .main-under #content {
     padding: 30px 0 50px;
   }
 
   .main-under p,
-  .main-under li,
-  .main-under a,
-  .main-under th,
-  .main-under td,
-  .main-under dt,
-  .main-under dd,
-  .main-under dl {
+.main-under li,
+.main-under a,
+.main-under th,
+.main-under td,
+.main-under dt,
+.main-under dd,
+.main-under dl {
     font-size: 14px;
   }
 }
-
 /* end screen-max:750px */
 /* end screen-max:640px */
 /* end screen-max:560px */
@@ -77,7 +72,6 @@
 /* EGDE */
 /* FIREFOX */
 @-moz-document url-prefix() {}
-
 /* Safari 10.1+ (which is the latest version of Safari at this time) */
 
 /*# sourceMappingURL=under_responsive.css.map */
