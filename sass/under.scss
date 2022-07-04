@@ -12,20 +12,41 @@
         }
     }
 
+    p,
+    table {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    p {
+        margin-bottom: 15px;
+    }
+
+    a {
+        &:hover {
+            color: $main-cl;
+        }
+    }
+
+    p,
+    li,
+    a,
+    th,
+    td,
+    dt,
+    dd,
+    dl {
+        font-size: 18px;
+        // letter-spacing: -0.6px;
+        // line-height: 2;
+        // font-weight: 500;
+    }
+
     #content {
         padding: 0 0 100px;
         margin: 0 auto;
         width: 1080px;
-        p,
-        table {
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
     }
 }
 
@@ -154,25 +175,24 @@
 
 .under-frame {
     background-color: rgba($color: #8cdcf0, $alpha: 0.4);
-    border-radius: 10px;
-    // border: 2px #ffe61e dotted;
-    border: 2px #8cdcf0 double;
+    // border-radius: 10px;
+    // border: 2px #8cdcf0 double;
     box-shadow: 0 0 10px rgba($color: #000, $alpha: 0.1);
     padding: 20px;
     position: relative;
     overflow: hidden;
 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 25px 25px 0;
-        border-color: transparent #8cdcf0 transparent transparent;
-    }
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     width: 0;
+    //     height: 0;
+    //     border-style: solid;
+    //     border-width: 0 25px 25px 0;
+    //     border-color: transparent #8cdcf0 transparent transparent;
+    // }
 
     .frm-tt {
         text-align: center;
@@ -378,25 +398,27 @@
 
     li {
         margin: 0 24px 20px;
-    }
-
-    a {
-        background: #4ec0dd;
-        font-weight: 500;
+        width: 365px;
+        max-width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    a {
         position: relative;
-        width: 365px;
+        width: 100%;
         height: 100%;
-        text-decoration: none;
+        background: $main-cl;
         font-size: 20px;
-        letter-spacing: -0.5px;
-        z-index: 1;
-        transition: all 0.3s ease;
-        padding: 20px 10px;
+        font-weight: 500;
         line-height: 1.2;
+        text-decoration: none;
+        letter-spacing: -0.5px;
         text-align: center;
+        padding: 20px 10px;
+        transition: all 0.3s ease;
+        z-index: 1;
 
         &::before {
             content: "";
@@ -436,25 +458,7 @@
 
 // ======================== content ========================
 .main-under {
-    p,
-    li,
-    a,
-    th,
-    td,
-    dt,
-    dd,
-    dl {
-        font-size: 18px;
-        // letter-spacing: -0.6px;
-        // line-height: 2;
-        // font-weight: 500;
-    }
-
-    a {
-        &:hover {
-            color: #4ec0dd;
-        }
-    }
+   
 
     .sec-wrapper {
         max-width: 1080px;

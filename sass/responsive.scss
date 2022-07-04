@@ -100,6 +100,12 @@
     //     font-size: 140%;
     // }
 
+    [href^="tel"] {
+        &:hover{
+            color: unset !important;
+        }
+    }
+
     #wrapper {
         min-width: unset !important;
     }

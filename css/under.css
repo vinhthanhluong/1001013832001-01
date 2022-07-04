@@ -121,23 +121,10 @@
 
 .under-frame {
   background-color: rgba(140, 220, 240, 0.4);
-  border-radius: 10px;
-  border: 2px #8cdcf0 double;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   position: relative;
   overflow: hidden;
-}
-.under-frame::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 25px 25px 0;
-  border-color: transparent #8cdcf0 transparent transparent;
 }
 .under-frame .frm-tt {
   text-align: center;

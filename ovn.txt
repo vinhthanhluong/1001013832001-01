@@ -1,0 +1,49 @@
+<!-- *********   PAGINATION   ********* -->
+<ONPagenation record_count="$max_record_count" limit="$limitNum">
+    <ONIf condition="$max_record_count > $limitNum">
+        <ul class="pagination">
+            <ONIf condition="$current_page <= 1">
+                <li class="disabled"><a href="#">&lt;&lt;</a></li>
+                <ONElse>
+                    <li><a href="./?p={=$current_page-1=}">&lt;&lt;</a></li>
+            </ONIf>
+
+            <ONPagenationFetch>
+                <ONIf condition="$current_page == $page">
+                    <li class="active"><a href="#">{=$page=}</a></li>
+                    <ONElse>
+                        <li><a href="./?p={=$page=}">{=$page=}</a></li>
+                </ONIf>
+            </ONPagenationFetch>
+
+            <ONIf condition="$current_page*$limitNum<$max_record_count">
+                <li><a href="./?p={=$current_page+1=}">&gt;&gt;</a></li>
+                <ONElse>
+                    <li class="disabled"><a href="#">&gt;&gt;</a></li>
+            </ONIf>
+        </ul>
+    </ONIf>
+</ONPagenation>
+<!-- *********    /PAGINATION ********* -->
+
+
+<div class="section">
+    <div class="btn_prev_next_sec clearfix">
+        <?php $current_url = $url; ?>
+        <ONContributeSearch category="$current_category_id">
+            <ONContributeFetch>
+                <?php $pages[] = $url; ?>
+            </ONContributeFetch>
+        </ONContributeSearch>
+        <?php $current_page = array_search($current_url,$pages); ?>
+        <ul class="btn_prev_next">
+            <?php if($prev = @$pages[$current_page+1]): ?>
+            <li class="prevPage"><a href="../<?php echo $prev ?>">&#8592; 前の記事へ</a></li>
+            <?php endif; ?>
+            <li class="centerPage"><a href="../{=$current_category_url=}/">一覧に戻る</a></li>
+            <?php if($next = @$pages[$current_page-1]): ?>
+            <li class="nextPage"><a href="../<?php echo $next ?>">次の記事へ &#8594;</a></li>
+            <?php endif ?>
+        </ul>
+    </div>
+</div>
