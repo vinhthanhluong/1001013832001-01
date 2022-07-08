@@ -1,35 +1,108 @@
 #header {
     background: #fff;
-    padding: 20px 0;
-    height: 100px;
-    border-bottom: 1px solid black;
+    padding: 16px 0;
+    height: 88px;
     width: 100%;
-    transition: all .3s ease;
-    h1{
-        padding-bottom: 50px;
+    transition: all 0.3s ease;
+    h1 {
+        display: none;
     }
 
     // &.--fix{
     //     position: fixed;
     //     top: 0;
     // }
+
+    .logo {
+        a {
+            display: block;
+        }
+    }
 }
 
-.header-main{
+.open-nav {
+    .header-menu {
+        @include visible;
+    }
+}
+
+.header-main {
     display: flex;
     align-content: center;
     justify-content: space-between;
 }
 
-.header-act{
+.header-act {
     display: flex;
     align-items: center;
+}
+
+.header-social {
+    width: 24px;
+    height: 24px;
+    background: url("../images/ic-instagram.png") center no-repeat;
+    background-size: contain;
+    margin-right: 31px;
+    margin-top: 24px;
+}
+
+.header-web {
+    font-family: $serif;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 11px;
+    position: relative;
+    width: 200px;
+    height: 48px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background-image: linear-gradient(135deg, #038ed1 0%, #06abd1 31.5642%, #4ab9a6 66.2011%, #78be62 100%);
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background: url("../images/ic-calen.png") center no-repeat;
+        background-size: contain;
+        margin-right: 5px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 6px;
+        right: 6px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 8px 8px;
+        border-color: transparent transparent #fff transparent;
+    }
+}
+
+.header-phone {
+    font-size: 26px;
+    font-family: $serif;
+    position: relative;
+    margin-right: 16px;
+    letter-spacing: 0.6px;
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 20px;
+        background: url("../images/ic-tel.png") center no-repeat;
+        background-size: contain;
+        transform: translate(2px, 1px);
+    }
 }
 
 .menu-list {
     position: relative;
     display: flex;
-    column-gap: 25px;
 
     // style chung
     a {
@@ -37,21 +110,197 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
     }
 }
 
 .dropdown {
     position: relative;
+
+    > span {
+        color: $main-cl;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: $serif;
+        position: relative;
+        letter-spacing: 2px;
+        &::after {
+            content: "";
+            width: 2px;
+            height: 40px;
+            background-color: $main-cl;
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translate(-50%, -100%);
+        }
+    }
 }
 
 .sub-menu {
     width: 100%;
-    background-color: white;
 
-    a , span {
-        padding: 15px;
+    a,
+    span {
+        padding: 7px 10px 8px;
+        padding-left: 20px;
         display: block;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    a {
+        &::before {
+            content: "";
+            position: absolute;
+            top: 13px;
+            left: 5px;
+            width: 6px;
+            height: 10px;
+            background: url("../images/ic-rt.png") center no-repeat;
+            background-size: contain;
+            transition: all 0.3s ease;
+        }
     }
 }
 
+.header-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #f2fbfd;
+    z-index: 98;
+    padding: 90px 0 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all .3s ease;
+    @include hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.menu-ft {
+    width: 830px;
+    margin-top: 39px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    a {
+        width: calc(50% - 10px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        height: 140px;
+        border-radius: 5px;
+        font-family: $serif;
+    }
+
+    .mu-tt {
+        font-size: 18px;
+        position: relative;
+        &::before,
+        &::after {
+            content: "";
+            width: 1px;
+            height: 18px;
+            position: absolute;
+            top: 4px;
+            background-color: #fff;
+        }
+
+        &::before {
+            left: -18px;
+            transform: rotate(-45deg);
+        }
+
+        &::after {
+            right: -17px;
+            transform: rotate(45deg);
+        }
+    }
+
+    .menu-contact {
+        border: 2px solid $main-cl;
+        background-color: #fff;
+
+        .mu-tt {
+            color: $main-cl;
+            transform: translateX(4px);
+            margin-top: 5px;
+            &::before,
+            &::after {
+                background-color: $main-cl;
+            }
+        }
+    }
+    .mu-tell {
+        font-size: 35px;
+        position: relative;
+        letter-spacing: 1px;
+        transform: translateY(1px);
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 21px;
+            height: 27px;
+            background: url("../images/ic-tel2.png") center no-repeat;
+            background-size: contain;
+            margin-right: 17px;
+            transform: translateX(10px);
+        }
+    }
+
+    .menu-web {
+        position: relative;
+        color: #fff;
+        overflow: hidden;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../images/bg-gradient.jpg');
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 10px 10px;
+            border-color: transparent transparent #fff transparent;
+        }
+
+        .mu-tt {
+            margin-bottom: 5px;
+        }
+    }
+
+    .mu-wtt {
+        font-size: 30px;
+        position: relative;
+        letter-spacing: 2px;
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 23px;
+            height: 24px;
+            background: url("../images/ic-calen2.png") center no-repeat;
+            background-size: contain;
+            margin-right: 6px;
+            transform: translate(-2px, 2px);
+        }
+    }
+}

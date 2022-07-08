@@ -1,0 +1,80 @@
+Vui lòng thêm thẻ sau vào liên kết bên ngoài.
+rel="noopener"
+=========================================================
+
+Vui lòng cài đặt dữ liệu có cấu trúc.
+Trang cài đặt: Trang TOP + hồ sơ công ty (会社概要)
+<script type="application/ld+json">
+    {
+        "@context" : "https://schema.org/",
+        "@type" : "LocalBusiness",
+        "name" : "渋谷青山デンタルクリニック",
+        "image" : "※ロゴのURL※",
+        "telephone" : "準備中",
+        "address" : {
+        "@type" : "PostalAddress",
+        "streetAddress" : "渋谷1-8-7 第27SYビル 10階 B",
+        "addressLocality" : "渋谷区",
+        "addressRegion" : "東京都",
+        "postalCode" : "150-0002"
+        },
+        "openingHoursSpecification": [
+        {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],,
+        "opens": "10:00",
+        "closes": "20:00"
+        }
+    ]
+        }
+    }
+</script>
+=========================================================
+
+onclick="gtag('event', 'contact', {'event_category': 'sp'});
+=========================================================
+
+Thêm "loading =" lazy "" vào thẻ <img> và <iframe>
+loading="lazy"
+=========================================================
+
+Vui lòng nhập (tên cửa hàng) + (tên khu vực) cho logo và thẻ alt chính càng nhiều càng tốt.
+渋谷の歯医者「渋谷青山デンタルクリニック」
+=========================================================
+
+Vui lòng thiết lập đường dẫn breadcrumb.
+<script type="application/ld+json">
+	{
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": 
+        [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {	
+                    "@id": "https://www.shibuya-aoyama-dc.com/",
+                    "name": "戸塚パール歯科"
+                }
+            },
+        ]
+	}
+</script>
+=========================================================
+
+Cài đặt thumbnail
+<meta name="thumbnail" content="https://www.hideshima-dental.com/images/aaaaaaaa.jpg" />
+=========================================================
+
+
+Thêm thẻ chuẩn ở trên đầu.
+* Vui lòng nhập URL của từng trang trên trang trước.
+
+<link rel="canonical" href="* URL trang">
+
+
+
+///////// Font
+Noto Serif    ->  font-family: 'Noto Serif JP', serif;
+Noto Sans 
+Lora   ->         font-family: 'Lora', serif;

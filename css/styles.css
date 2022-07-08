@@ -3,6 +3,8 @@
 @import url(../js/libs/slick/slick-theme.css);
 @import url(../css/animation.css);
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 *,
 *::before,
 *::after {
@@ -206,7 +208,7 @@ html {
 }
 
 body {
-  font-size: 14px;
+  font-size: 15px;
   min-height: 100vh;
   transform-origin: all 0.3s;
   min-width: 320px;
@@ -218,7 +220,7 @@ html {
   margin: auto;
   font-family: "Noto Sans JP", sans-serif;
   line-height: 1.4;
-  color: #000;
+  color: #2d231f;
   background: #fff;
 }
 body::-webkit-scrollbar,
@@ -227,7 +229,7 @@ html::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-thumb,
 html::-webkit-scrollbar-thumb {
-  background: #8cdcf0;
+  background: #0493d2;
   border-radius: 990px;
 }
 body::-webkit-scrollbar-track,
@@ -268,7 +270,7 @@ p:last-child {
 }
 
 .container {
-  width: 1200px;
+  width: 1000px;
   max-width: 100%;
   margin: 0 auto;
 }
@@ -294,24 +296,6 @@ p:last-child {
   width: auto;
   height: 100%;
   object-fit: cover;
-}
-
-.img-l {
-  float: left;
-  margin: 0 60px 20px 0;
-  line-height: 0;
-}
-
-.img-r {
-  float: right;
-  margin: 0 0 20px 60px;
-  line-height: 0;
-}
-
-.img-c {
-  text-align: center;
-  margin: 0 auto 33px;
-  line-height: 0;
 }
 
 .lk-full {
@@ -470,39 +454,46 @@ p:last-child {
 }
 
 .hamburger-btn {
-  width: 40px;
-  height: 40px;
+  width: 47px;
+  height: 47px;
   position: relative;
   cursor: pointer;
-  display: none;
   z-index: 99;
 }
+.hamburger-btn span {
+  display: block;
+  margin-top: 13px;
+  color: #0493d2;
+  font-family: "Lora", serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 .hamburger-btn .bar {
-  width: 30px;
-  height: 3px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #8cdcf0;
-  border-radius: 2px;
+  width: 100%;
+  height: 4px;
+  position: relative;
+  margin-top: 14px;
+  background-color: #0493d2;
   transition: all 0.3s ease;
 }
 .hamburger-btn .bar::before, .hamburger-btn .bar::after {
   content: "";
-  width: 30px;
-  height: 3px;
+  width: 100%;
+  height: 4px;
   position: absolute;
-  left: 0;
-  border-radius: 2px;
-  background-color: #8cdcf0;
+  background-color: #0493d2;
   transition: all 0.3s ease;
 }
 .hamburger-btn .bar::before {
-  top: -8px;
+  top: -10px;
 }
 .hamburger-btn .bar::after {
-  top: 8px;
+  top: 10px;
+}
+.hamburger-btn.--active span {
+  display: none;
 }
 .hamburger-btn.--active .bar {
   background-color: transparent;
@@ -522,8 +513,8 @@ p:last-child {
   right: 30px;
   width: 50px;
   height: 50px;
-  background-color: #8cdcf0;
-  border: 1px #8cdcf0 solid;
+  background-color: #0493d2;
+  border: 1px #0493d2 solid;
   border-radius: 4px;
   cursor: pointer;
   z-index: 98;
@@ -576,24 +567,39 @@ p:last-child {
   display: none;
 }
 #topic-path a:hover {
-  color: #8cdcf0;
+  color: #0493d2;
 }
 
 .main-cl {
-  color: #8cdcf0;
+  color: #0493d2;
+}
+
+.f-serif {
+  font-family: "Noto Serif JP", serif;
+}
+
+.f-lora {
+  font-family: "Lora", serif;
 }
 
 /*============================= H_E_A_D_E_R =============================*/
 #header {
   background: #fff;
-  padding: 20px 0;
-  height: 100px;
-  border-bottom: 1px solid black;
+  padding: 16px 0;
+  height: 88px;
   width: 100%;
   transition: all 0.3s ease;
 }
 #header h1 {
-  padding-bottom: 50px;
+  display: none;
+}
+#header .logo a {
+  display: block;
+}
+
+.open-nav .header-menu {
+  opacity: 1;
+  visibility: visible;
 }
 
 .header-main {
@@ -607,10 +613,71 @@ p:last-child {
   align-items: center;
 }
 
+.header-social {
+  width: 24px;
+  height: 24px;
+  background: url("../images/ic-instagram.png") center no-repeat;
+  background-size: contain;
+  margin-right: 31px;
+  margin-top: 24px;
+}
+
+.header-web {
+  font-family: "Noto Serif JP", serif;
+  font-size: 16px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 11px;
+  position: relative;
+  width: 200px;
+  height: 48px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background-image: linear-gradient(135deg, #038ed1 0%, #06abd1 31.5642%, #4ab9a6 66.2011%, #78be62 100%);
+}
+.header-web::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url("../images/ic-calen.png") center no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+.header-web::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 8px 8px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.header-phone {
+  font-size: 26px;
+  font-family: "Noto Serif JP", serif;
+  position: relative;
+  margin-right: 16px;
+  letter-spacing: 0.6px;
+}
+.header-phone::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 20px;
+  background: url("../images/ic-tel.png") center no-repeat;
+  background-size: contain;
+  transform: translate(2px, 1px);
+}
+
 .menu-list {
   position: relative;
   display: flex;
-  column-gap: 25px;
 }
 .menu-list a {
   position: relative;
@@ -623,14 +690,176 @@ p:last-child {
 .dropdown {
   position: relative;
 }
+.dropdown > span {
+  color: #0493d2;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Noto Serif JP", serif;
+  position: relative;
+  letter-spacing: 2px;
+}
+.dropdown > span::after {
+  content: "";
+  width: 2px;
+  height: 40px;
+  background-color: #0493d2;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
 
 .sub-menu {
   width: 100%;
-  background-color: white;
 }
-.sub-menu a, .sub-menu span {
-  padding: 15px;
+.sub-menu a,
+.sub-menu span {
+  padding: 7px 10px 8px;
+  padding-left: 20px;
   display: block;
+  font-size: 14px;
+  font-weight: 300;
+}
+.sub-menu a::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 5px;
+  width: 6px;
+  height: 10px;
+  background: url("../images/ic-rt.png") center no-repeat;
+  background-size: contain;
+  transition: all 0.3s ease;
+}
+
+.header-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #f2fbfd;
+  z-index: 98;
+  padding: 90px 0 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.menu-ft {
+  width: 830px;
+  margin-top: 39px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.menu-ft a {
+  width: calc(50% - 10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: 140px;
+  border-radius: 5px;
+  font-family: "Noto Serif JP", serif;
+}
+.menu-ft .mu-tt {
+  font-size: 18px;
+  position: relative;
+}
+.menu-ft .mu-tt::before, .menu-ft .mu-tt::after {
+  content: "";
+  width: 1px;
+  height: 18px;
+  position: absolute;
+  top: 4px;
+  background-color: #fff;
+}
+.menu-ft .mu-tt::before {
+  left: -18px;
+  transform: rotate(-45deg);
+}
+.menu-ft .mu-tt::after {
+  right: -17px;
+  transform: rotate(45deg);
+}
+.menu-ft .menu-contact {
+  border: 2px solid #0493d2;
+  background-color: #fff;
+}
+.menu-ft .menu-contact .mu-tt {
+  color: #0493d2;
+  transform: translateX(4px);
+  margin-top: 5px;
+}
+.menu-ft .menu-contact .mu-tt::before, .menu-ft .menu-contact .mu-tt::after {
+  background-color: #0493d2;
+}
+.menu-ft .mu-tell {
+  font-size: 35px;
+  position: relative;
+  letter-spacing: 1px;
+  transform: translateY(1px);
+}
+.menu-ft .mu-tell::before {
+  content: "";
+  display: inline-block;
+  width: 21px;
+  height: 27px;
+  background: url("../images/ic-tel2.png") center no-repeat;
+  background-size: contain;
+  margin-right: 17px;
+  transform: translateX(10px);
+}
+.menu-ft .menu-web {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+.menu-ft .menu-web::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg-gradient.jpg");
+}
+.menu-ft .menu-web::after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 10px 10px;
+  border-color: transparent transparent #fff transparent;
+}
+.menu-ft .menu-web .mu-tt {
+  margin-bottom: 5px;
+}
+.menu-ft .mu-wtt {
+  font-size: 30px;
+  position: relative;
+  letter-spacing: 2px;
+}
+.menu-ft .mu-wtt::before {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 24px;
+  background: url("../images/ic-calen2.png") center no-repeat;
+  background-size: contain;
+  margin-right: 6px;
+  transform: translate(-2px, 2px);
 }
 
 /*============================= F_O_O_T_E_R =============================*/
@@ -650,45 +879,9 @@ p:last-child {
 }
 
 /*============================= C_O_N_T_E_N_T =============================*/
-.text-aos {
-  margin-top: 1000px;
-  font-size: 30px;
-  color: blue;
-  position: relative;
-  transition: all 0.3s ease;
-  font-weight: bold;
-  letter-spacing: 5px;
-  color: #fff;
-  color: red;
-}
-.text-aos::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: blueviolet;
-  transition: all 1.2s ease;
-  right: 0;
-  left: unset;
-}
-.text-aos.aos-animate {
-  color: red;
-}
-.text-aos.aos-animate::before {
-  width: 0;
-}
-.text-aos2 {
-  margin-top: 1000px;
-}
-.text-aos3 {
-  margin-top: 1000px;
-}
-
-#header h1 {
-  font-size: 16px;
-  padding-bottom: 0;
+.index img {
+  width: auto;
+  height: auto;
 }
 
 /*============================= HACK CSS =============================*/
