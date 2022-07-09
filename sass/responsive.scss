@@ -139,6 +139,7 @@
     .menu-list {
         display: block;
         width: 100%;
+        padding: 0 70px;
         // overflow-x: hidden;
         // overflow-y: auto;
         // height: calc(100vh - 70px);
@@ -162,6 +163,7 @@
     }
 
     .dropdown {
+        border-bottom: 1px solid #fff;
         .open {
             .mu-ic{
                 transform: translateY(-50%) rotate(-90deg);
@@ -174,10 +176,11 @@
         }
 
         span {
-            padding: 10px 70px 10px;
+            // padding: 10px 70px 10px;
+            padding: 10px 0;
             width: 100%;
             display: block;
-            // border-bottom: 1px solid #fff;
+            // border-bottom: 1px solid blue;
             font-weight: normal;
 
             &::after {
@@ -185,16 +188,16 @@
                 width: 60px;
                 height: 1px;
                 transform: none;
-                left: 0;
+                left: -10px;
                 top: 50%;
-                transform: translate(0, -50%);
+                transform: translate(-100%, -50%);
             }
         }
         .mu-ic {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            right: 70px;
+            right: 10px;
             width: 2px;
             height: 20px;
             padding: 0;
@@ -213,6 +216,9 @@
                 transform: rotate(90deg);
                 transition: all .3s ease;
             }
+            &::after{
+                display: none;
+            }
         }
     }
 
@@ -221,31 +227,31 @@
         top: 0;
         left: 0;
         display: none;
-        padding: 10px 20px;
+        padding: 0 10px;
 
         a,
         span {
-            padding: 6px 16px;
-            position: relative;
-
-            &::after {
-                content: "";
-                position: absolute;
-                top: 16px;
-                left: 0;
-                width: 10px;
-                height: 1px;
-                background-color: #004680;
-            }
+            padding: 10px;
+            padding-left: 20px;
         }
 
-        // .sub-menu a {
-        //     padding-left: 30px;
-        // }
+        a{
+            &::before{
+                top: 50%;
+                transform: translateY(-50%);
+            }
 
-        // .sub-menu .sub-menu a {
-        //     padding-left: 40px;
-        // }
+            &::after{
+                content: '';
+                width: calc(100% + 20px);
+                height: 1px;
+                background-color: #fff;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     }
     //  ========================== END - Header ==========================
 }
@@ -281,12 +287,32 @@
         }
     }
 
+    .menu-list{
+        padding: 0 20px;
+    }
+
+    .dropdown{
+        span{
+            font-size: 16px;
+            &::after{
+                left: -5px;
+            }
+        }
+
+        .mu-ic{
+            height: 16px;
+            &::before{
+                height: 16px;
+            }
+        }
+    }
+
     .hamburger-btn {
-        width: 40px;
-        height: 40px;
+        width: 36px;
+        height: 36px;
 
         span {
-            font-size: 11px;
+            font-size: 10px;
         }
     }
     //  ========================== END - Header ==========================

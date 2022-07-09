@@ -114,6 +114,10 @@
   .menu-list {
     display: block;
     width: 100%;
+    padding: 0 70px;
+  }
+  .dropdown {
+    border-bottom: 1px solid #fff;
   }
   .dropdown .open .mu-ic {
     transform: translateY(-50%) rotate(-90deg);
@@ -123,7 +127,7 @@
     opacity: 0;
   }
   .dropdown span {
-    padding: 10px 70px 10px;
+    padding: 10px 0;
     width: 100%;
     display: block;
     font-weight: normal;
@@ -133,15 +137,15 @@
     width: 60px;
     height: 1px;
     transform: none;
-    left: 0;
+    left: -10px;
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(-100%, -50%);
   }
   .dropdown .mu-ic {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: 70px;
+    right: 10px;
     width: 2px;
     height: 20px;
     padding: 0;
@@ -160,28 +164,35 @@
     transform: rotate(90deg);
     transition: all 0.3s ease;
   }
+  .dropdown .mu-ic::after {
+    display: none;
+  }
 
   .sub-menu {
     position: relative;
     top: 0;
     left: 0;
     display: none;
-    padding: 10px 20px;
+    padding: 0 10px;
   }
   .sub-menu a,
 .sub-menu span {
-    padding: 6px 16px;
-    position: relative;
+    padding: 10px;
+    padding-left: 20px;
   }
-  .sub-menu a::after,
-.sub-menu span::after {
+  .sub-menu a::before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .sub-menu a::after {
     content: "";
-    position: absolute;
-    top: 16px;
-    left: 0;
-    width: 10px;
+    width: calc(100% + 20px);
     height: 1px;
-    background-color: #004680;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 /* end screen-max:750px */
@@ -194,12 +205,29 @@
     width: 200px;
   }
 
+  .menu-list {
+    padding: 0 20px;
+  }
+
+  .dropdown span {
+    font-size: 16px;
+  }
+  .dropdown span::after {
+    left: -5px;
+  }
+  .dropdown .mu-ic {
+    height: 16px;
+  }
+  .dropdown .mu-ic::before {
+    height: 16px;
+  }
+
   .hamburger-btn {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
   }
   .hamburger-btn span {
-    font-size: 11px;
+    font-size: 10px;
   }
 }
 /* end screen-max:425px */

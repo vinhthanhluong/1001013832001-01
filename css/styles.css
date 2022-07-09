@@ -866,7 +866,6 @@ p:last-child {
 #footer {
   display: block;
   clear: both;
-  text-align: left;
   margin-top: auto;
 }
 #footer .copyright {
@@ -876,6 +875,140 @@ p:last-child {
   background: #004870;
   font-size: 11px;
   letter-spacing: 0.005em;
+}
+
+.footer-top {
+  background-color: wheat;
+}
+.footer-top .ft-logo {
+  display: block;
+  margin-bottom: 50px;
+}
+.footer-top .ft-logo img {
+  margin: 0 auto;
+}
+.footer-top .ft-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-top .ft-list li {
+  width: calc(50% - 20px);
+  background-color: #fff;
+  padding: 52px 50px;
+}
+.footer-top .ft-tkb {
+  margin-bottom: 30px;
+}
+.footer-top .ft-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+.footer-top .if-tt {
+  color: #0493d2;
+  font-family: "Noto Serif JP", serif;
+  display: block;
+  font-size: 13px;
+  transform: translate(6px, 1px);
+  letter-spacing: 0.5px;
+}
+.footer-top .if-tel {
+  font-size: 24px;
+  letter-spacing: 0.5px;
+}
+.footer-top .if-tel::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 20px;
+  background: url(../images/ic-tel.png) center no-repeat;
+  background-size: contain;
+  transform: translate(0px, 1px);
+}
+.footer-top .if-web {
+  width: 172px;
+  height: 48px;
+  border-radius: 5px;
+  background-image: linear-gradient(135deg, #038ed1 0%, #06abd1 31.5642%, #4ab9a6 66.2011%, #78be62 100%);
+  color: #fff;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Noto Serif JP", serif;
+  font-size: 16px;
+  position: relative;
+}
+.footer-top .if-web::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url("../images/ic-calen.png") center no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+}
+.footer-top .if-web::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 8px 8px;
+  border-color: transparent transparent #fff transparent;
+}
+.footer-top .ft-img {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-top .ft-map iframe {
+  width: 100%;
+  height: 272px;
+}
+.footer-top .map-list {
+  margin-bottom: 14px;
+}
+.footer-top .map-list p {
+  letter-spacing: 1.4px;
+  margin-top: 5px;
+}
+.footer-top .map-list p::before {
+  content: "";
+  display: inline-block;
+  margin-right: 6px;
+  transform: translateY(5px);
+}
+.footer-top .map-location::before {
+  width: 13px;
+  height: 22px;
+  background: url("../images/ic-location.png") center no-repeat;
+  background-size: contain;
+}
+.footer-top .map-train::before {
+  width: 14px;
+  height: 21px;
+  background: url("../images/ic-train.png") center no-repeat;
+  background-size: contain;
+}
+.footer-top .map-lk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: 1.4px;
+}
+.footer-top .map-lk::after {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../images/ic-rt2.png") center no-repeat;
+  background-size: contain;
+  margin-left: 11px;
+  transform: translate(-1px, 2px);
 }
 
 /*============================= C_O_N_T_E_N_T =============================*/
