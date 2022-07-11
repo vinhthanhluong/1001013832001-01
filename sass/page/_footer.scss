@@ -69,7 +69,7 @@
             display: inline-block;
             width: 15px;
             height: 20px;
-            background: url(../images/ic-tel.png) center no-repeat;
+            background: url('../images/svg/ic-tel.svg') center no-repeat;
             background-size: contain;
             transform: translate(0px, 1px);
         }
@@ -94,7 +94,7 @@
             display: inline-block;
             width: 14px;
             height: 14px;
-            background: url("../images/ic-calen.png") center no-repeat;
+            background: url("../images/svg/ic-calen.svg") center no-repeat;
             background-size: contain;
             margin-right: 5px;
         }
@@ -146,7 +146,7 @@
         &::before {
             width: 13px;
             height: 22px;
-            background: url("../images/ic-location.png") center no-repeat;
+            background: url("../images/svg/ic-location.svg") center no-repeat;
             background-size: contain;
         }
     }
@@ -155,7 +155,7 @@
         &::before {
             width: 14px;
             height: 21px;
-            background: url("../images/ic-train.png") center no-repeat;
+            background: url("../images/svg/ic-train.svg") center no-repeat;
             background-size: contain;
         }
     }
@@ -171,7 +171,7 @@
             display: inline-block;
             width: 24px;
             height: 24px;
-            background: url("../images/ic-rt2.png") center no-repeat;
+            background: url("../images/svg/ic-rt2.svg") center no-repeat;
             background-size: contain;
             margin-left: 11px;
             transform: translate(-1px, 2px);
