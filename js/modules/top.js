@@ -7,6 +7,7 @@ $(function () {
             this.aos();
             this.wow();
             // this.visual();
+            this.sliderTreatments();
         },
 
         //aos
@@ -54,6 +55,35 @@ $(function () {
                     pauseOnHover: false,
                     fade: false,
                     variableWidth: false,
+                });
+            }
+        },
+
+
+        sliderTreatments: function () {
+            if ($('#sld-treatments').length > 0) {
+                $('#sld-treatments').slick({
+                    dots: false,
+                    infinite: true,
+                    speed: 1000,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    arrows: false,
+                    pauseOnHover: false,
+                    responsive: [
+                        {
+                            breakpoint: 751,
+                            settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                infinite: true,
+                                dots: true,
+                                arrows: true,
+                                autoplay: true,
+                                autoplaySpeed: 4000,
+                            }
+                        },
+                    ]
                 });
             }
         },
