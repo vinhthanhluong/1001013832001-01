@@ -1513,6 +1513,7 @@ p:last-child {
   flex-shrink: 0;
   width: 82px;
   margin-right: 60px;
+  padding-top: 10px;
 }
 .main-menus .menus-en {
   color: #0493d2;
@@ -1579,6 +1580,12 @@ p:last-child {
 }
 .main-menus .menus-item:nth-child(5) .menus-tt {
   margin-bottom: 4px;
+}
+.main-menus .menus-item:nth-child(6) .menus-txt {
+  margin-top: 4px;
+}
+.main-menus .menus-item:nth-child(6) .menus-tt {
+  margin-bottom: 17px;
 }
 .main-menus .menus-item:nth-child(11) .menus-txt {
   margin-top: -5px;

@@ -471,6 +471,7 @@
         // width: 142px;
         width: 82px;
         margin-right: 60px;
+        padding-top: 10px;
     }
 
     .menus-en {
@@ -553,6 +554,15 @@
             }
             .menus-tt{
                 margin-bottom: 4px;
+            }
+        }
+
+        &:nth-child(6){
+            .menus-txt{
+                margin-top: 4px;
+            }
+            .menus-tt{
+                margin-bottom: 17px;
             }
         }
 
