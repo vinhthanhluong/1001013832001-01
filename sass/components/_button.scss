@@ -38,6 +38,16 @@
             background-color: #fff;
             color: $cl-green;
         }
+    }
+
+    
+    &.btn-main{
+        background-color: $main-cl;
+        border-color: $main-cl;
+        &:hover{
+            background-color: #fff;
+            color: $main-cl;
+        }
 
     }
 

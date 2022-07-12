@@ -9,6 +9,7 @@ $(function () {
             // this.visual();
             this.sliderTreatments();
             this.sliderFeatures();
+            this.sliderGallery();
         },
 
         //aos
@@ -112,6 +113,36 @@ $(function () {
                             }
                         },
                     ]
+                });
+            }
+        },
+        sliderGallery: function () {
+            if ($('.gallery-slide').length > 0) {
+                var gallerySm = new Swiper(".gallery-sm", {
+                    slidesPerView: 3,
+                    grid: {
+                        rows: 3
+                    },
+                    spaceBetween: 10,
+                    freeMode: true,
+                    watchSlidesProgress: true,
+                    navigation: {
+                        nextEl: ".swiper-button-next",
+                        prevEl: ".swiper-button-prev",
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true
+                    },
+                    
+                });
+                var galleryBg = new Swiper(".gallery-bg", {
+                    spaceBetween: 10,
+                    thumbs: {
+                        swiper: gallerySm,
+                    },
+                    
+                    
                 });
             }
         },
