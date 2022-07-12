@@ -134,15 +134,17 @@ $(function () {
                         el: ".swiper-pagination",
                         clickable: true
                     },
-                    
+                    simulateTouch: false,
+
                 });
                 var galleryBg = new Swiper(".gallery-bg", {
                     spaceBetween: 10,
                     thumbs: {
                         swiper: gallerySm,
                     },
-                    
-                    
+
+                    simulateTouch: false,
+
                 });
             }
         },
