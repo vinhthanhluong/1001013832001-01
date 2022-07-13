@@ -2,6 +2,15 @@
   #topic_path li a:hover {
     text-decoration: none;
   }
+
+  .uBtn:hover {
+    color: #222;
+    background: #fff;
+    color: #54bb99;
+  }
+  .uBtn:hover::before {
+    border-color: #54bb99;
+  }
 }
 /* end screen-min:751px */
 /* end screen-min:751px && screen-max:1500px */

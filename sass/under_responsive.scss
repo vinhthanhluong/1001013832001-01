@@ -3,13 +3,21 @@
 @import "./core/mixins";
 
 @include min-media(751px) {
-    #topic_path {
-        li {
-            a:hover {
-                text-decoration: none;
-            }
-        }
-    }
+	#topic_path {
+		li {
+			a:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	.uBtn:hover {
+		color: #222;
+		background: #fff;
+		color: #54bb99;
+		&::before {
+			border-color: #54bb99;
+		}
+	}
 }
 
 /* end screen-min:751px */
@@ -20,73 +28,71 @@
 /* end screen-min:751px && screen-max:1500px */
 
 @include max-media(750px) {
-    .img-r,
-    .img-l {
-        float: none;
-        text-align: center;
-        margin: 0 0 20px;
-    }
+	.img-r,
+	.img-l {
+		float: none;
+		text-align: center;
+		margin: 0 0 20px;
+	}
 
-    // ======================== table ========================
-    .under-tbl {
-        tr {
-            th + td {
-                border-top: none;
-            }
-            &:not(:first-child) th {
-                border-top: none;
-            }
-        }
-    }
+	// ======================== table ========================
+	.under-tbl {
+		tr {
+			th + td {
+				border-top: none;
+			}
+			&:not(:first-child) th {
+				border-top: none;
+			}
+		}
+	}
 
-    .tbl-block {
-        display: block;
-        thead,
-        tbody,
-        tr,
-        td,
-        th {
-            display: block;
-            width: 100%;
-        }
-    }
+	.tbl-block {
+		display: block;
+		thead,
+		tbody,
+		tr,
+		td,
+		th {
+			display: block;
+			width: 100%;
+		}
+	}
 
-    .tbl-note {
-        font-size: 12px;
-        opacity: 0.6;
-    }
+	.tbl-note {
+		font-size: 12px;
+		opacity: 0.6;
+	}
 
-    .tbl-scroll {
-        overflow: auto;
-    }
+	.tbl-scroll {
+		overflow: auto;
+	}
 
-    .tbl-scroll table {
-        min-width: 640px;
-    }
+	.tbl-scroll table {
+		min-width: 640px;
+	}
 
-    // ======================== under style ========================
+	// ======================== under style ========================
 
+	// ======================== content ========================
+	.main-under {
+		#content {
+			padding: 30px 0 50px;
+		}
+	}
 
-
-    // ======================== content ========================
-    .main-under{
-        #content {
-            padding: 30px 0 50px;
-        }
-    }
-
-    .main-under {
-        p,
-        li,
-        a,
-        th,
-        td,
-        dt,
-        dd,
-        dl {
-            font-size: 14px;
-        }
-    }
+	.main-under {
+		p,
+		li,
+		a,
+		th,
+		td,
+		dt,
+		dd,
+		dl {
+			font-size: 14px;
+		}
+	}
 }
 
 /* end screen-max:750px */
@@ -142,6 +148,6 @@
 
 /* Safari 10.1+ (which is the latest version of Safari at this time) */
 @media not all and (min-resolution: 0.001dpcm) {
-    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-    }
+	@supports (-webkit-appearance: none) and (stroke-color: transparent) {
+	}
 }
