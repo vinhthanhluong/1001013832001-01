@@ -321,7 +321,7 @@
     .ttm-title {
         text-align: center;
         // margin-bottom: 87px;
-        margin-bottom: 95px;
+        margin-bottom: 65px;
     }
 
     .ttm-en {
@@ -454,6 +454,10 @@
     .ttm-desc {
         line-height: 2.15;
         letter-spacing: 0.3px;
+    }
+
+    .slick-list {
+        padding: 30px 0 0;
     }
 }
 
@@ -1031,7 +1035,7 @@
             font-family: "Noto Serif JP", serif;
         }
 
-        .firsts-contact {
+        .firsts-contacts {
             border: 2px solid #0493d2;
             background-color: #fff;
 
@@ -1717,7 +1721,7 @@
 }
 
 .gallery {
-    padding: 81px 0 100px;
+    padding: 81px 0 80px;
     .gallery-title {
         text-align: center;
         margin-bottom: 42px;
@@ -1753,12 +1757,13 @@
             color: $cl-green3;
         }
     }
-    .gallery-slide{
+    .gallery-slide {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 59px;
     }
 
-    .swiper{
+    .swiper {
         margin: 0;
     }
 
@@ -1767,7 +1772,7 @@
         .swiper-slide {
             text-align: center;
             font-size: 18px;
-            background: wheat;
+            background: #fff;
             height: 350px;
             display: flex;
             justify-content: center;
@@ -1782,27 +1787,371 @@
             position: relative;
             text-align: center;
             font-size: 18px;
-            background: wheat;
+            background: #fff;
             height: calc((100% - 20px) / 3) !important;
-    
+
             display: flex;
             justify-content: center;
             align-items: center;
-            &::before{
-                content: '';
+            &::before {
+                content: "";
                 @include pos-full;
                 border: 8px solid $cl-green3;
-                transition: all .3s ease;                
+                transition: all 0.3s ease;
                 opacity: 0;
             }
         }
 
-        .swiper-slide-thumb-active{
-            &::before{
+        .swiper-slide-thumb-active {
+            &::before {
                 opacity: 0.7;
             }
         }
     }
 
-    
+    .btn {
+        margin: 0 auto;
+    }
+}
+
+.contacts {
+    margin: 30px 0 30px;
+    padding: 83px 0 70px;
+    color: #fff;
+    background: url("../images/contacts-img03.jpg") center no-repeat;
+    background-size: contain;
+    width: 2000px;
+    min-width: 1280px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    &::before {
+        content: "";
+        @include pos-full;
+        background: url("../images/bg-gradient02.jpg") center;
+        opacity: 0.9;
+        z-index: -1;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: -30px;
+        bottom: -30px;
+        width: 100%;
+        background: url("../images/contacts-bg01.png") center;
+        z-index: -2;
+        opacity: 0.4;
+    }
+
+    .contacts-wrapper {
+        width: 688px;
+        max-width: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+    .contacts-title {
+        font-family: $serif;
+        font-size: 40px;
+        margin-bottom: 30px;
+        text-align: center;
+        letter-spacing: -0.4px;
+    }
+
+    .contacts-df {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 42px;
+        font-family: $serif;
+        &::before {
+            content: "";
+            position: absolute;
+            top: calc(48% - 1px);
+            left: 32px;
+            transform: translate(-100%, -50%);
+            background: url("../images/contacts-img01.png") center no-repeat;
+            background-size: contain;
+            width: 444px;
+            height: 430px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 52%;
+            right: 2px;
+            transform: translate(100%, -50%);
+            background: url("../images/contacts-img02.png") center no-repeat;
+            background-size: contain;
+            width: 353px;
+            height: 409px;
+        }
+    }
+
+    .contacts-act {
+        padding: 9px 10px 11px;
+        background-color: $main-cl;
+        width: calc(50% - 10px);
+        text-align: center;
+    }
+
+    .contacts-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .contacts-tt {
+        text-align: center;
+        overflow: hidden;
+        margin-bottom: 17px;
+
+        span {
+            margin: 0 auto;
+            position: relative;
+            font-size: 19px;
+            font-family: $serif;
+            display: inline-block;
+            &::before {
+                content: "";
+                width: 100vw;
+                height: 1px;
+                background-color: #fff;
+                position: absolute;
+                top: 50%;
+                left: -20px;
+                transform: translate(-100%, -50%);
+            }
+            &::after {
+                content: "";
+                width: 100vw;
+                height: 1px;
+                background-color: #fff;
+                position: absolute;
+                top: 50%;
+                right: -20px;
+                transform: translate(100%, -50%);
+            }
+        }
+    }
+
+    .contacts-list {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contacts-tel {
+        text-align: center;
+        display: inline-block;
+        width: 320px;
+        span {
+            display: block;
+        }
+    }
+
+    .contacts-tl {
+        font-family: $serif;
+        font-size: 40px;
+        position: relative;
+        letter-spacing: 1px;
+        padding-left: 5px;
+        line-height: 1.3;
+        &::before {
+            content: "";
+            width: 20px;
+            height: 26px;
+            background-image: url("../images/svg/ic-tel2.svg");
+            background-size: contain;
+            filter: brightness(0) invert(1);
+            display: inline-block;
+            transform: translate(-6px, -3px);
+        }
+    }
+
+    .contacts-time {
+        letter-spacing: 0.7px;
+    }
+
+    .contacts-web {
+        font-family: $serif;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        color: #2d231f;
+        position: relative;
+        width: 360px;
+        height: 80px;
+        border-radius: 5px;
+        transform: translateX(6px);
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 23px;
+            height: 23px;
+            background-image: url("../images/svg/ic-calen3.svg");
+            background-size: contain;
+            transform: translateX(-10px);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 0 10px 10px;
+            border-color: transparent transparent $main-cl transparent;
+        }
+    }
+}
+
+.news-case {
+    padding: 69px 0 81px;
+
+    .ncase-title {
+        margin-bottom: 33px;
+        text-align: center;
+    }
+
+    .ncase-en {
+        font-size: 15px;
+        font-family: $lora;
+        color: $main-cl;
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 15px;
+        margin-bottom: 17px;
+        display: block;
+        letter-spacing: 2px;
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 1px;
+            background: $main-cl;
+        }
+    }
+
+    .ncase-jp {
+        font-family: $serif;
+        font-size: 32px;
+        display: block;
+    }
+
+    .ncase-head {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+    }
+
+    .ncase-tt {
+        width: calc((100% - 100px) / 3);
+        height: 60px;
+        border-radius: 5px;
+        color: #fff;
+        font-family: $serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+        &.active {
+            &::before {
+                @include visible;
+            }
+        }
+
+        &:nth-child(1) {
+            background-color: $main-cl;
+            &::before {
+                border-color: $main-cl transparent transparent transparent;
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: $main2-cl;
+            &::before {
+                border-color: $main2-cl transparent transparent transparent;
+            }
+        }
+
+        &:nth-child(3) {
+            background-color: $cl-green3;
+            &::before {
+                border-color: $cl-green3 transparent transparent transparent;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translate(-50%, 100%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 9px 7px 0 7px;
+            transition: all 0.3s ease;
+            @include hidden;
+        }
+    }
+
+    .ncase-box {
+        display: none;
+        &.active {
+            display: block;
+            animation: fadeIn 1s ease-in-out;
+        }
+    }
+
+    .ncase-list {
+        li {
+            display: block;
+            padding: 26px 30px;
+            position: relative;
+            border-bottom: 1px solid #e4e4e4;
+            &:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    .ncase-item {
+        position: relative;
+        padding-left: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 7px;
+            left: 0;
+            width: 9px;
+            height: 9px;
+            border-radius: 100%;
+            background-color: $main-cl;
+        }
+    }
+
+    .ncase-date {
+        letter-spacing: 0.5px;
+        padding-right: 16px;
+    }
+
+    .ncase-t {
+        font-family: $serif;
+        letter-spacing: 0.3px;
+        transition: all 0.3s ease;
+        &:hover {
+            color: $main-cl;
+        }
+    }
 }

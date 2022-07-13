@@ -121,7 +121,8 @@ $(function () {
                 var gallerySm = new Swiper(".gallery-sm", {
                     slidesPerView: 3,
                     grid: {
-                        rows: 3
+                        rows: 3,
+                        fill: 'row',
                     },
                     spaceBetween: 10,
                     freeMode: true,
@@ -134,19 +135,31 @@ $(function () {
                         el: ".swiper-pagination",
                         clickable: true
                     },
-                    simulateTouch: false,
+                    // simulateTouch: false, 
 
                 });
                 var galleryBg = new Swiper(".gallery-bg", {
+                    speed: 800,
                     spaceBetween: 10,
                     thumbs: {
                         swiper: gallerySm,
                     },
-
                     simulateTouch: false,
-
+                    effect: "creative",
+                    creativeEffect: {
+                        prev: {
+                            shadow: true,
+                            translate: ["-20%", 0, -1],
+                        },
+                        next: {
+                            translate: ["100%", 0, 0],
+                        },
+                    },
                 });
             }
+
+
+
         },
     }
 

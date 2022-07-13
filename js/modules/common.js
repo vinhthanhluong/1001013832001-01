@@ -13,7 +13,7 @@ $(function () {
     }
     var obj = {
         init: function () {
-            // this.tab();
+            this.tab();
             this.toTop();
             this.anchorLink();
             this.matchHeight();
