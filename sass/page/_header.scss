@@ -1,17 +1,19 @@
 #header {
-    background: #fff;
     padding: 16px 0;
     height: 88px;
     width: 100%;
-    transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    z-index: 99;
     h1 {
         display: none;
     }
 
-    // &.--fix{
-    //     position: fixed;
-    //     top: 0;
-    // }
+    &.--fix{
+        background-color: #fff;
+    }
 
     .logo {
         a {
@@ -226,7 +228,7 @@
         }
     }
 
-    .menu-contact {
+    .menu-contacts {
         border: 2px solid $main-cl;
         background-color: #fff;
 

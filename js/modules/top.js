@@ -6,7 +6,7 @@ $(function () {
         init: function () {
             this.aos();
             this.wow();
-            // this.visual();
+            this.visual();
             this.sliderTreatments();
             this.sliderFeatures();
             this.sliderGallery();
@@ -42,21 +42,36 @@ $(function () {
         },
 
         visual: function () {
-            if ($('#visual').length > 0) {
-                $('#visual').slick({
+            if ($('#visuals-sm').length > 0) {
+                $('#visuals-sm').slick({
                     dots: false,
                     infinite: true,
                     speed: 1000,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     autoplay: true,
-                    autoplaySpeed: 5000,
+                    autoplaySpeed: 4300,
                     arrows: false,
                     centerMode: false,
                     centerPadding: 0,
                     pauseOnHover: false,
-                    fade: false,
-                    variableWidth: false,
+                    pauseOnFocus:false,
+                });
+            }
+            if ($('#visuals-bg').length > 0) {
+                $('#visuals-bg').slick({
+                    dots: false,
+                    infinite: true,
+                    speed: 1500,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 3500,
+                    arrows: false,
+                    centerMode: false,
+                    centerPadding: 0,
+                    pauseOnHover: false,
+                    pauseOnFocus:false,
                 });
             }
         },
@@ -81,8 +96,8 @@ $(function () {
                                 infinite: true,
                                 dots: true,
                                 arrows: true,
-                                autoplay: true,
-                                autoplaySpeed: 4000,
+                                // autoplay: true,
+                                // autoplaySpeed: 5000,
                             }
                         },
                     ]
@@ -157,9 +172,6 @@ $(function () {
                     },
                 });
             }
-
-
-
         },
     }
 

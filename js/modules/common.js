@@ -104,6 +104,11 @@ $(function () {
                     // $(this).closest('.dropdown').siblings().find('span').removeClass('open');
                 });
             }
+            
+            $(window).scroll(function () { 
+                var st = $(window).scrollTop();
+                st >= 10 ?  $('#header').addClass('--fix') : $('#header').removeClass('--fix');
+            });
         },
 
         //scroll to mail form

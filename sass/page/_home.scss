@@ -4,6 +4,205 @@
     }
 }
 
+#main{
+    margin-top: 88px;
+}
+
+
+.index-visual {
+    padding-bottom: 45px;
+    background: url('../images/bg-clip.png') bottom -35px center no-repeat #fff local;;
+    .visuals-wrapper {
+        position: relative;
+    }
+
+    .visuals-slider {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .visuals-sm {
+        width: 310px;
+        max-width: 100%;
+    }
+
+    .visuals-bg {
+        width: 670px;
+        max-width: 100%;
+    }
+
+    .vis-title {
+        font-family: $serif;
+        font-size: 32px;
+        margin-bottom: 25px;
+        display: inline-flex;
+        align-items: center;
+        flex-direction: column;
+        > span {
+        }
+    }
+
+    .vis-s {
+        width: max-content;
+        display: inline-block;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.1);
+        padding: 5px 20px 13px 20px;
+        letter-spacing: -0.2px;
+        margin-bottom: 10px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .vis-box {
+        display: inline-block;
+        text-align: center;
+        z-index: 1;
+        position: absolute;
+        top: 194px;
+        left: 5px;
+    }
+
+    .vis-list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        li {
+            height: 120px;
+            width: 120px;
+            border-radius: 100%;
+            position: relative;
+            z-index: 0;
+            @include flex-mid;
+            &::before {
+                content: "";
+                position: absolute;
+                top: -5px;
+                right: -5px;
+                bottom: -5px;
+                left: -5px;
+                opacity: 0.35;
+                border-radius: 100%;
+                z-index: -1;
+            }
+
+            &:nth-child(1) {
+                background-color: $main-cl;
+                &::before {
+                    background-color: $main-cl;
+                }
+            }
+            &:nth-child(2) {
+                background-color: $main2-cl;
+                &::before {
+                    background-color: $main2-cl;
+                }
+            }
+            &:nth-child(3) {
+                background-color: $cl-green;
+                &::before {
+                    background-color: $cl-green;
+                }
+            }
+            &:nth-child(4) {
+                background-color: $cl-green2;
+                &::before {
+                    background-color: $cl-green2;
+                }
+            }
+        }
+    }
+
+    .vis-item {
+        color: #fff;
+        font-size: 20px;
+        font-family: $serif;
+        line-height: 1.2;
+        .vs-30 {
+            font-size: 150%;
+        }
+
+        .vs-26 {
+            font-size: 130%;
+        }
+
+        .vs-24 {
+            font-size: 120%;
+        }
+    }
+
+    .vis-new {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 35px;
+    }
+
+    .vsnew-tt {
+        font-family: $lora;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 15px;
+        color: $main-cl;
+        position: relative;
+        padding-right: 32px;
+        padding-top: 1px;
+    }
+
+    .vsnews-df{
+        display: flex;
+    }
+
+    .vsnew-list {
+        padding-right: 30px;
+        li {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 8px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .vsnew-date {
+        padding-right: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    .vsnew-t {
+        display: inline-block;
+        width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &:hover {
+            color: $main-cl;
+        }
+    }
+
+    .vsnew-lk {
+        display: inline-block;
+        width: 38px;
+        height: 38px;
+        background-color: $main-cl;
+        border-radius: 100%;
+        position: relative;
+        right: 0;
+        margin-top: 7px;
+        &::before {
+            content: "";
+            @include pos-mid;
+            width: 6px;
+            height: 10px;
+            background-image: url("../images/svg/ic-rt-w01.svg");
+        }
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+}
+
 .concept {
     position: relative;
     background-color: #f2f9ee;
@@ -53,7 +252,7 @@
 
     .concept-img {
         float: left;
-        margin-left: calc(((100vw - 1000px) / 2 + 40px) * -1);
+        margin-left: calc(((1920px - 1000px) / 2 + 40px) * -1);
         margin-right: 131px;
         position: relative;
         z-index: 0;
@@ -80,7 +279,7 @@
     .concept-ig {
         position: absolute;
         bottom: 2px;
-        right: calc(((100vw - 1000px) / 2 + 67px) * -1);
+        right: calc(((1920px - 1000px) / 2 + 67px) * -1);
         z-index: 0;
 
         &::before {
@@ -99,7 +298,7 @@
 
 .greetings {
     position: relative;
-    padding: 96px 0 100px;
+    padding: 96px 0 91px;
     background: url("../images/bg-logo.png") no-repeat;
     background-position: top 112px right 100px;
 
@@ -160,7 +359,7 @@
             background-color: #fff;
             width: 100vw;
             // height: 326px;
-            top: calc(38% + 3px);
+            top: calc(38% - 1px);
             z-index: -1;
         }
     }
@@ -321,7 +520,7 @@
     .ttm-title {
         text-align: center;
         // margin-bottom: 87px;
-        margin-bottom: 65px;
+        margin-bottom: 35px;
     }
 
     .ttm-en {
@@ -361,22 +560,6 @@
         padding: 10px 33px;
     }
 
-    .ttm-head {
-        position: absolute;
-        top: 0;
-        right: 0;
-        opacity: 0;
-
-        span {
-            font-size: 17px;
-            font-family: $serif;
-        }
-    }
-
-    .ttm-tt1 {
-        display: block;
-    }
-
     .ttm-ig {
         display: flex;
         align-items: center;
@@ -391,7 +574,7 @@
         height: 240px;
         transform: translateX(-10px);
 
-        span {
+        .ttm-i {
             display: block;
             background-repeat: no-repeat;
             background-position: center right -70px;
@@ -411,14 +594,23 @@
         }
     }
 
+    .ttm-bft{
+        position: absolute;
+        width: 324px;
+        height: 324px;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+    }
+
     .tm-ig2 {
-        span {
+        .ttm-i {
             background-position: center right -90px;
         }
     }
 
     .tm-ig3 {
-        span {
+        .ttm-i {
             background-position: top -52px right -43px;
         }
     }
@@ -457,7 +649,7 @@
     }
 
     .slick-list {
-        padding: 30px 0 0;
+        padding: 60px 0 0;
     }
 }
 
@@ -501,6 +693,7 @@
         display: block;
         text-align: center;
         transform: translate(3px, 0);
+        font-size: 15px;
 
         &::before {
             content: "";
@@ -550,19 +743,6 @@
                     right: -10px;
                 }
             }
-        }
-
-        &:nth-child(3n + 1) {
-            width: 233px;
-        }
-
-        &:nth-child(3n + 2) {
-            width: 256px;
-            transform: translateX(13px);
-        }
-
-        &:nth-child(3n + 3) {
-            width: 278px;
         }
 
         &:nth-child(5),
@@ -806,7 +986,7 @@
 
 .features {
     padding: 77px 0 98px;
-    background: url("../../images/bg-clip-green.png") bottom center no-repeat;
+    background: url("../images/bg-clip-green.png") bottom center no-repeat;
 
     .features-title {
         margin-bottom: 56px;
@@ -972,11 +1152,12 @@
                 a {
                     background-color: $main-cl;
                     border-color: $main-cl;
-
-                    &:hover {
-                        background-color: #fff;
-                        color: $main-cl;
+                    color: #fff;
+                    &::before{
+                        filter: brightness(0) invert(1);
+                        right: 18px;
                     }
+                    
                 }
             }
         }
@@ -1246,11 +1427,11 @@
         font-size: 32px;
         letter-spacing: 3px;
         position: relative;
-        &::after {
+        a {
             content: "";
             position: absolute;
             bottom: -20px;
-            left: 50%;
+            left: 51%;
             transform: translate(-50%, -100%);
             width: 30px;
             height: 30px;
@@ -1452,7 +1633,7 @@
         .implant-ig.pc {
             float: left;
             margin-right: unset;
-            margin-left: calc((100vw - 920px) / 2 * -1);
+            margin-left: calc((1920px - 920px) / 2 * -1);
             margin-top: 46px;
         }
 
@@ -1558,7 +1739,7 @@
 
     .implant-ig.pc {
         float: right;
-        margin-right: calc((100vw - 920px) / 2 * -1);
+        margin-right: calc((1920px - 920px) / 2 * -1);
         margin-top: 82px;
         position: relative;
         z-index: 1;
